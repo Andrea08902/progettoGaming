@@ -43,3 +43,22 @@ function mostraGiochi(){
         console.log(`${i} - ${g.titolo} - (${g.piattaforma})`)
     })
 }
+
+/**
+ * funzione che permette di rimuovere un gioco dalla collezione tramite l'indice del gioco da rimuovere
+ * @param {number} indice - indice del gioco da rimuovere
+ * @return {void}
+ */ 
+
+function rimuoviGioco(){
+    mostraGiochi()
+
+    const indice = prompt("Inserisci gioco da rimuovere: ")
+
+    if(indice>=0 && indice < giochi.length){
+        giochi.splice(indice,1)
+        console.log("Gioco rimosso con successo!!!")
+    }else{
+        console.log("Indice non valido!!!")
+    }
+}
