@@ -96,3 +96,14 @@ function ordinGiochi(){
 
     mostraGiochi()
 }
+
+/**
+ * esportazione delle funzioni per poterle utilizzare in main.js
+ */
+module.exports = {
+    aggiungiGioco,
+    rimuoviGioco,
+    mostraGiochi,
+    filtraGiochi,
+    ordinGiochi
+}
