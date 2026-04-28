@@ -62,3 +62,19 @@ function rimuoviGioco(){
         console.log("Indice non valido!!!")
     }
 }
+
+/**
+ * funzione che permette di filtrare i giochi per piattaforma o genere
+ * @param {string} tipo - tipo di filtro (piattaforma o genere)
+ * @param {string} valore - valore del filtro
+ * @return {void}
+ */
+
+function filtraGiochi(){
+    const tipo = prompt("Filtra per (piattaforma/genere): ")
+    const valore = prompt("Valore: ").toLowerCase()
+
+    const risultati = giochi.filter(g=> g[tipo].toLowerCase() === valore)
+
+    console.log(risultati)
+}
