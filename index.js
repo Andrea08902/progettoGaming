@@ -78,3 +78,21 @@ function filtraGiochi(){
 
     console.log(risultati)
 }
+
+/**
+ *  funzione che permette di ordinare i giochi per anno di uscita o titolo
+ * @param {string} criterio - criterio di ordinamento (anno o titolo)
+ * @return {void}
+ */
+
+function ordinGiochi(){
+    const criterio = prompt("Ordina per (anno/titolo): ")
+
+    if(criterio === "titolo"){
+        giochi.sort((a,b) => a.titolo.localeCompare(b.titolo))
+    }else if(criterio === "anno"){
+        giochi.sort((a,b)=>a.anno - b.anno)
+    }
+
+    mostraGiochi()
+}
