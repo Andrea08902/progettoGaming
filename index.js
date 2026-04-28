@@ -27,3 +27,19 @@ function aggiungiGioco(){
 
     console.log("Gioco aggiunto con successo!!!!")
 }
+
+/**
+ * funzione che permette di mostrare la lista dei giochi presenti nella collezione
+ * @return {void}
+ */
+
+function mostraGiochi(){
+    if(giochi.length === 0){
+        console.log("Nessun gioco presente nella collezione")
+        return
+    }
+
+    giochi.forEach((g,i) =>{
+        console.log(`${i} - ${g.titolo} - (${g.piattaforma})`)
+    })
+}
